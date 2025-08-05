@@ -1,0 +1,19 @@
+<div class="organizer" style="width: 102px;">
+  {% if page.photo %}
+  <img class="organizer-image" src="{{ site.baseurl }}{{ page.subpath }}{{
+  page.photo }}" alt="">
+  {% endif %}
+  <div>
+    <h3 class="organizer-name">
+      {% if page.website %}
+      <center><a href="{{ page.website }}">{{ page.name }}</a></center>
+      {% else %}
+      {{ page.name }}
+      {% endif %}
+    </h3>
+    {% if page.affiliation %}
+    <center><p>{{ page.affiliation }}</p></center>
+    {% endif %}
+    {{ content }}
+  </div>
+</div>

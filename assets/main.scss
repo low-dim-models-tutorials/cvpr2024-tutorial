@@ -1,0 +1,172 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Our variables
+$base-font-family:
+  Open Sans,
+  sans-serif;
+$monospace-font-family: Monaco, Menlo, Consolas, "Courier New", DotumChe,
+  monospace;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$h1-weight: 700;
+$h2-weight: 700;
+$h3-weight: 400;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit: 32px;
+
+$text-color: #111;
+$background-color: #fdfdfd;
+$brand-color: #2869e6;
+$title-color: #183385;
+
+$grey-color: #757575;
+$grey-color-light: lighten($grey-color, 45%);
+$grey-color-dark: darken($grey-color, 20%);
+
+// Width of the content area
+$content-width: 800px;
+
+$on-palm: 600px;
+$on-laptop: 800px;
+
+// whiteglass also includes a mixin for defining media queries.
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// custom code for contact container
+#contact-container {
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+
+  .pic {
+    float: left;
+  }
+
+  .info {
+    float: left;
+    margin-left: 2em;
+    font-family: Lato;
+
+    #email-small {
+      display: none;
+    }
+
+    #address {
+      display: block;
+    }
+
+    @include media-query($on-palm) {
+      font-family: Lato;
+
+      p {
+        font-size: 13px;
+      }
+
+      #email-small {
+        display: block;
+      }
+
+      #address {
+        display: none;
+      }
+    }
+  }
+}
+
+// custom code for icons container
+#icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+#icon-container-item {
+  width: 32px;
+  height: 32px;
+}
+
+// class for svg icon imports
+.d-none {
+  display: none !important;
+}
+
+// class for images in the title block
+.svg-container {
+  padding-bottom: 16px; /* Adds padding around the image */
+}
+
+// Code for javascript toggles
+
+a.btn {
+  color: var(--global-text-color);
+  border: 1px solid var(--global-text-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  &:hover {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
+}
+
+.hidden {
+  font-size: 0.875rem;
+  max-height: 0px;
+  overflow: hidden;
+  text-align: justify;
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: all 0.15s ease;
+
+  p {
+    line-height: 1.4em;
+    margin: 10px;
+  }
+  pre {
+    font-size: 1em;
+    line-height: 1.4em;
+    padding: 10px;
+  }
+}
+.hidden.open {
+  max-height: 100em;
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+div.abstract.hidden {
+  border: dashed 1px var(--global-bg-color);
+}
+div.abstract.hidden.open {
+  border-color: var(--global-text-color);
+}
+
+// Import partials from the `whiteglass` theme.
+@import "whiteglass";
+@import "organizer";

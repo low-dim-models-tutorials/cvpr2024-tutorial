@@ -1,0 +1,19 @@
+.organizer {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  max-width: 100%;
+
+  .organizer-image {
+    border-radius: 50%;
+    // height: 128px;
+    // margin-right: 16px;
+    aspect-ratio:1/1;
+  }
+
+  p,
+  .organizer-name {
+    margin: 4px !important;
+  }
+
+}

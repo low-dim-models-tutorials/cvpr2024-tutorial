@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+    {% include icons/icons.html %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+            {% include anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" h_min=2 h_max=2 %}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+  {% include scripts/misc.html %}
+
+</html>
