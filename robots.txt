@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://cvpr2024-tutorial-low-dim-models.github.io/sitemap.xml
+Sitemap: https://low-dim-models-tutorials.github.io/cvpr2024-tutorial/sitemap.xml
