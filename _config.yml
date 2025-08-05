@@ -1,7 +1,7 @@
 title: "Learning Deep Low-Dimensional Models from High-Dimensional Data: From Theory to Practice"
 description: >- # this means to ignore newlines until "baseurl:"
   'Website for CVPR 2024 Tutorial "Learning Deep Low-Dimensional Models from High-Dimensional Data: From Theory to Practice"'
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/cvpr2024-tutorial" # the subpath of your site, e.g. /blog
 url: "https://cvpr2024-tutorial-low-dim-models.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 
